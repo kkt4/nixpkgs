@@ -238,7 +238,7 @@ in
 
           unitConfig.RequiresMountsFor = "/var/lib/samba";
 
-          restartTriggers = [ configFile ];
+          restartTriggers = [ environment.etc."samba/smb.conf".source ];
         };
       })
 
@@ -274,7 +274,7 @@ in
 
           unitConfig.RequiresMountsFor = "/var/lib/samba";
 
-          restartTriggers = [ configFile ];
+          restartTriggers = [ environment.etc."samba/smb.conf".source ];
         };
       })
 
@@ -305,7 +305,7 @@ in
 
           unitConfig.RequiresMountsFor = "/var/lib/samba";
 
-          restartTriggers = [ configFile ];
+          restartTriggers = [ environment.etc."samba/smb.conf".source ];
         };
       })
     ];
